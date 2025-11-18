@@ -33,24 +33,24 @@ Here is a pseudocode of what this code does. Developing pseudocode is a good pre
 
 ## CUDA Library Functions
 - cudaFree(d_img)<br>
-This de-allocates GPU memory.
+This de-allocates GPU memory.<br>
 d_img - This points to the memory to de-allocate.
 - cudaMemcpy(d_mem, s_mem, imgSize, cudaMemcpyDeviceToHost)<br>
-This copies data between CPU and GPU. 
-cudaMemcpyDeviceToHost - Copies data from GPU device to host.
-cudaMemcpyHostToDevice - Copies data from host to GPU device.
-cudaMemcpyDeviceToDevice - Copies data from GPU device to GPU device.
-d_mem - Destination memory.
-s_mem - Source memory
-imgSize - The number of bytes to copy.
+This copies data between CPU and GPU. <br>
+cudaMemcpyDeviceToHost - Copies data from GPU device to host.<br>
+cudaMemcpyHostToDevice - Copies data from host to GPU device.<br>
+cudaMemcpyDeviceToDevice - Copies data from GPU device to GPU device.<br>
+d_mem - Destination memory.<br>
+s_mem - Source memory<br>
+imgSize - The number of bytes to copy.<br>
 - cudaDeviceSynchronize()<br>
 This blocks the CPU until all previously launched GPU work in finished.
 - fractalKernel<<grid, block>>()<br>
 This will run the fractal algorithm in parallel on the GPU.
 - cudaMalloc(&d_img, imgSize)<br>
 It allocates memory on the GPU device.
-d_img - This is a pointer to the allocated memory.
-imgSize - This is the size of the memory in bytes to allocate.
+d_img - This is a pointer to the allocated memory.<br>
+imgSize - This is the size of the memory in bytes to allocate.<br>
 - CUDA_CHECK()<br>
 This is a user-defined error check wrapper. After calling a CUDA function, call this to check for any errors.
 
