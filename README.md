@@ -74,5 +74,14 @@ cat output.txt
 
 # View fractal images in out_data/ directory.
 ```
+## Tools I used
+- Video & Audio recording<br>
+OBS Studio (free): https://obsproject.com/
+- Text-to-Speech<br>
+In Microsoft Edge browser.<br>
+Highlight a text, right click, select 'More Tools', then 'read aloud selection'.
+- Markdown online free editor<br>
+This is to create the README.md file.<br>
+https://stackedit.io/<br>
 
 
