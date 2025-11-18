@@ -134,7 +134,6 @@ int main() {
 
     // Iterate through all of the "C" parameter values.
     for (size_t i = 0; i < real_num.size(); i++) {
-
         // Call the kernel.
         fractalKernel<<<grid, block>>>(
             d_img, width, height,
