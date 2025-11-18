@@ -1,7 +1,7 @@
 # GPU-Flip-Image
-Project: GPU - Generate Fractal Images
-Author: George Barrinuevo
-Date: 11/17/2025
+Project: GPU - Generate Fractal Images<br>
+Author: George Barrinuevo<br>
+Date: 11/17/2025<br>
 
 ## Purpose
 The purpose of this repository is to demonstrate how GPU programming using CUDA NPP libraries can be used to generate fractal images. 
