@@ -19,6 +19,11 @@ The output.txt contains the runtime output to the fractal program.
 The generated fractal JPG images are found in the out_data/ directory.
 - Lessons Learned<br>
 While debugging the code, I found out some older version of the CUDA functions are deprecated which requires using the latest versions and methods assuming you have the latest libraries/packages installed. I also learned that the best starting point on a CUDA project is to obtain a code template that demonstrates how to use the CUDA in say an image manipulation project. This template will have a lot of the allocate, de-allocate, copy, kernel, and etc that is required for CUDA programming. I also learned when calling a CUDA function, to check for any errors.
+- Next Steps<br>
+Here is a short list of how I would further expand on this project.<br>
+  - I would add more "C" parameters, especially for the Mandelbot Set.
+  - This project generates fractal images. I would expand to also include fractal video when the fractal self evolves and changes. Only a video (not a still image) can capture this.<br>
+  - There are other types of fractals other than Julia and Mandelbot Set fractals. I would search for these online and include them in this project.
 
 ## Pseudocode
 Here is a pseudocode of what this code does. Developing pseudocode is a good preparation before diving in to the CUDA code.
