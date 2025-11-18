@@ -8,16 +8,16 @@ The purpose of this repository is to demonstrate how GPU programming using CUDA 
 
 ## Description
 The code will read a data.txt input file where each line contains the "C" parameter to the fractal, first column is the real number, second column is the imaginary number. The mathematics used to generate these fractals can be found on the internet. The program can generate Julia and Mandelbot Set fractals, but the input data.txt file contains only "C" parameters for the Julia Set. The user can create another file to contain the "C" parameters for the Mandelbot Set. Each fractal is saved to a JPG file for later viewing.
-- Input File
+- Input File<br>
 The input file data.txt contains the "C" parameters for the Julia Set in this form: '1.23 4.56', where the first number is the real number, second number is the imaginary number. This would be expressed mathematically like this: C = 1.23 + 4.56i.
-- Output Directory
+- Output Directory<br>
 Once each fractal is generated will output the image to a JPG file in the out_data/ directory. You can click on a factal_xxxx.jpg file to view it. I have included the fractal images this program will generate in this directory.
-- Development Environment
+- Development Environment<br>
 I used Coursera's VS Code GUI to develop this code using NVidia's CUDA C++ libraries. The GPU was included in the VS Code GUI environment is a GPU is required to run this code. 
-- Artifacts
+- Artifacts<br>
 The output.txt contains the runtime output to the fractal program.
 The generated fractal JPG images are found in the out_data/ directory.
-- Lessons Learned
+- Lessons Learned<br>
 While debugging the code, I found out some older version of the CUDA functions are deprecated which requires using the latest versions and methods assuming you have the latest libraries/packages installed. I also learned that the best starting point on a CUDA project is to obtain a code template that demonstrates how to use the CUDA in say an image manipulation project. This template will have a lot of the allocate, de-allocate, copy, kernel, and etc that is required for CUDA programming. I also learned when calling a CUDA function, to check for any errors.
 
 ## Pseudocode
@@ -32,10 +32,10 @@ Here is a pseudocode of what this code does. Developing pseudocode is a good pre
 - Free the device and host memory.
 
 ## CUDA Library Functions
-- cudaFree(d_img)
+- cudaFree(d_img)<br>
 This de-allocates GPU memory.
 d_img - This points to the memory to de-allocate.
-- cudaMemcpy(d_mem, s_mem, imgSize, cudaMemcpyDeviceToHost)
+- cudaMemcpy(d_mem, s_mem, imgSize, cudaMemcpyDeviceToHost)<br>
 This copies data between CPU and GPU. 
 cudaMemcpyDeviceToHost - Copies data from GPU device to host.
 cudaMemcpyHostToDevice - Copies data from host to GPU device.
@@ -43,15 +43,15 @@ cudaMemcpyDeviceToDevice - Copies data from GPU device to GPU device.
 d_mem - Destination memory.
 s_mem - Source memory
 imgSize - The number of bytes to copy.
-- cudaDeviceSynchronize()
+- cudaDeviceSynchronize()<br>
 This blocks the CPU until all previously launched GPU work in finished.
-- fractalKernel<<grid, block>>()
+- fractalKernel<<grid, block>>()<br>
 This will run the fractal algorithm in parallel on the GPU.
-- cudaMalloc(&d_img, imgSize)
+- cudaMalloc(&d_img, imgSize)<br>
 It allocates memory on the GPU device.
 d_img - This is a pointer to the allocated memory.
 imgSize - This is the size of the memory in bytes to allocate.
-- CUDA_CHECK()
+- CUDA_CHECK()<br>
 This is a user-defined error check wrapper. After calling a CUDA function, call this to check for any errors.
 
 ## Fractal Math
