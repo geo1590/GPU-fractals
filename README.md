@@ -79,6 +79,9 @@ cat output.txt
 
 # View fractal images in out_data/ directory.
 ```
+## My Video Presentation
+This is my video presentation required for the Coursera online course: https://od.lk/d/NDdfMTAxMTI3MTAxXw/my-presentation.mp4
+
 ## Tools I used
 - Video & Audio recording<br>
 OBS Studio (free): https://obsproject.com/
